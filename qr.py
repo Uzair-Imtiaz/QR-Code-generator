@@ -1,10 +1,10 @@
 import qrcode
 from PIL import Image
 boxSize = 10
-border = 5
+border = 3
 qr = qrcode.QRCode(version=1,
                    error_correction=qrcode.constants.ERROR_CORRECT_H,
-                   boxSize, border)
+                   box_size=boxSize, border=border)
 url = 'https://github.com/Uzair-Imtiaz'
 qr.add_data(url)
 qr.make(fit=True)
